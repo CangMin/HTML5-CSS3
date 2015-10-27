@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>12.1.1认识属性选择器</title>
+	<style type="text/css">
+	p{
+		margin:4px;
+	}
+	a[href^="http:"]{
+		background:url() no-repeat left center;
+		padding-left:18px;
+	}
+	a[href$="pdf"]{
+		background:url() no-repeat left center;
+	}
+	a[href$="xls"]{
+		background:url() no-repeat left center;
+	}
+	a[href$="ppt"]{
+		background:url() no-repeat left center;
+	}
+	a[href$="rar"]{
+
+	}
+	......
+	</style>
+</head>
+<body>
+	<p><a href="http://www.test.com/name.pdf">pdf文件</a></p>
+	<p><a href="http://www.test.com/name.ppt">ppt文件</a></p>
+	<p><a href="http://www.test.com/name.xls">xls文件</a></p>
+	<p><a href="http://www.test.com/name.rar">rar文件</a></p>
+	<p><a href="http://www.test.com/name.gif">gif文件</a></p>
+	<p><a href="http://www.test.com/name.jpg">jpg文件</a></p>
+	<p><a href="http://www.test.com/name.png">png文件</a></p>
+	<p><a href="http://www.test.com/name.txt">txt文件</a></p>
+	<p><a href="http://www.test.com/#auchor">#锚点超链接</a></p>
+	<p><a href="http://www.baidu.com">http://www.baidu.com</a></p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>12.3.2案例实战：登录表单</title>
+	<style type="text/css">
+	#login{
+		width:400px;
+		padding:1em 2em 0 2em;
+		font-size:12px;
+
+	}
+	label{
+		line-height:26px;
+		display:block;
+		font-weight:bold;
+
+	}
+	#name,#password{
+		border:1px solid #ccc;
+		width:160px;
+		height:22px;
+		padding-left:20px;
+		margin:6px 0;
+		line-height:20px;
+	}
+	#name{
+		background-color:#fff;
+
+	}
+	#password{
+		background-color:#ffb;
+	}
+	.button{
+		margin:6px 0;
+	}
+	#login input:disabled#name{
+		border:1px solid #fff;
+	}
+	#login input:disabled#name{
+		border:1px solid #ffc;
+	}
+	</style>
+</head>
+<body>
+<fieldset id="login">
+	<legend>用户登录</legend>
+	<form action="" class="form">
+		<label for="name">姓名
+		<input type="text" name="name" id="name" value=""></label>
+		<label for="password">密码
+		<input type="text" name="password" id="password" value="" disabled="disabled">
+		</label>
+		<button class="button">登录</button>
+	</form>
+</fieldset>
+</body>
+</html>
