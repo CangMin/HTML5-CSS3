@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>13.1.1定义text-shadow属性、火焰字</title>
+	<style type="text/css">
+	p{
+		text-align:center;
+		color:#888;
+		text-shadow:0.1em 0.1em 0.2em #333;//参数：x轴偏移，y轴偏移，颜色
+	}
+	.shadow{
+		width:200px;
+		height:200px;
+		box-shadow:10px 10px 10px #555;
+		margin:0 auto;
+	}
+	.multicolor{
+	text-align:center;
+	color:red;
+	text-shadow:0.2em 0.5em 0.1em #600,
+	-0.3em 0.1em 0.1em #060,
+	0.4em -0.3em 0.1em #006;
+	}
+	.outline{
+		text-align:center;
+		color:red;
+		border:solid 1px red;
+		text-shadow:0.5em 0.5em 0.1em #600,
+		-1em 1em 0.1em #006,
+		0.8em -0.8em 0.1em #006;
+	}
+	.fire{
+		text-align:center;
+		color:red;
+		text-shadow:0 0 4px white,
+		0 0px 4px #ff3,
+		2px 0px 6px #fd3,
+		-2px 0px 11px #f80,
+		2px 0px 18px #f20;
+	}
+	.fire2{
+		text-align:center;
+		color:red;
+		text-shadow:0 0 4px white,
+		0 -5px 4px #ff3,
+		2px -10px 6px #fd3,
+		-2px -15px 11px #f80,
+		2px -25px 18px #f20;
+	}
+	.solid{
+		text-align:center;
+		padding:25px;
+		margin:0;
+		font-size:80px;
+		font-weight:bold;
+		color:#d1d1d1;
+		background:#ccc;
+		text-shadow:-1px -1px white,
+		1px 1px #333;
+	}
+	.solid2{
+		text-align:center;
+		padding:25px;
+		margin:0;
+		font-size:80px;
+		font-weight:bold;
+		color:#d1d1d1;
+		background:#ccc;
+		text-shadow:1px 1px white,
+		-1px -1px #333;
+	}
+	.draw{
+		text-align:center;
+		padding:24px;
+		font-size:80px;
+		color:#d1d1d1;
+		background:#ccc;
+		text-shadow:-1px 0 black,
+		0 1px black,
+		1px 0 black,
+		0 -1px black;
+	}
+	.light{
+		text-align:center;
+		padding:24px;
+		font-size:80px;
+		color:#d1d1d1;
+		background:#ccc;
+		text-shadow:0 0 0.2em #f87,
+		0 0 0.2em #f87;
+	}
+	</style>
+</head>
+<body>
+<p>HTML5+CSS3</p>
+<div class="shadow">阴影</div>
+<p class="multicolor">多色阴影</p>
+<p class="outline">把阴影设置到文本线框外</p>
+<p class="fire">火焰字</p>
+<p class="fire2">火焰字2</p>
+<p class="solid">立体外凸</p>
+<p class="solid2">立体内凹</p>
+<p class="draw">描边文字</p>
+<p class="light">外发光</p>
+</body>
+</html>
