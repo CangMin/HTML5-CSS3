@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>15.4定义复杂变形</title>
+	<style type="text/css">
+	body{
+		background:#000;
+	}
+	/*div{
+		background-color:#ffff00;
+		color:#000;
+		width:500px;
+		transition:background-color 1s linear,color 1s linear,width 1s linear;
+	}*/
+	/*div:hover{
+		background-color:#003366;
+		color:#fff;
+		width:600px;
+		height:50px;
+		line-height:50px;
+	}*/
+	.test >img{
+	position:absolute;
+	top:40px;
+	left:0;
+	height:200px;
+	transform:rotate(0deg);
+	transition:left 1s linear;
+	}
+	.test:hover img{
+		position:absolute;
+		left:500px;
+		transform:rotate(3000deg);
+	}
+	</style>
+</head>
+<body>
+<div>
+	大商股份股份的法国大使馆放大
+</div>
+<div class="test"><img src="../img/bg2.jpg" alt=""></div>
+</body>
+</html>

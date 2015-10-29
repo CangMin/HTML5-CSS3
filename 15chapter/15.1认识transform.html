@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>15.1认识transform</title>
+	<style type="text/css">
+	div{
+		position:absolute;
+		left:100px;
+		top:100px;
+		width:309px;
+		height:230px;
+		background:#0ff url(../img/bg.jpg) no-repeat;
+		background-size:cover;
+		transition:transform .5s easi-in,background .5s ease-in;
+	}
+	div:hover{
+		transform:rotate(180deg) scale(2) translate(10px,10px) skew(-9deg,0deg);
+	}
+	</style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
