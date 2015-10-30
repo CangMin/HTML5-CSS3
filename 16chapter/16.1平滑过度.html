@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>16.1平滑过度</title>
+	<style type="text/css">
+	div{
+		background-color:red;
+		width:400px;
+		height:200px;
+
+	}
+	div:hover{
+		background-color:blue;
+		transition-property:background-color;
+		transition-duration:5s;
+		transition-delay:0.2s;
+		/*transition-timing-function:linear;
+		transition-timing-function:ease;*/
+		transition-timing-function:cubic-bezier;
+	}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

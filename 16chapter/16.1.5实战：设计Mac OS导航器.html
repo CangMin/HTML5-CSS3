@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>16.1.5实战：设计Mac OS导航器</title>
+	<style type="text/css">
+	body{
+		background-image:url(../img/background.jpg);
+		background-repeat:no-repeat;
+		margin:0;
+		padding:0;
+
+	}
+	ul.osx-dock{
+		display:inline-block;
+		height:130px;
+		padding:0 40px 0 0;
+		overflow:hidden;
+		margin:0 0 0 40px;
+	}
+	ul.osx-dock li{
+		display:block;
+		position:relative;
+		float:left;
+		width:60px;
+		height:60px;
+		margin:60px 0 4px 0;
+		transition:0.15s linear;
+		transition-property:transform margin;
+		text-align:center;
+	}
+	ul.osx-dock li a{
+		display:block;
+		height:50px;
+		padding:0 1px;
+		transition:0.15s linear;
+		transition-property:transform margin;
+		margin:0;
+		-webkit-box-reflect:below 2px gradient(linear,left top,left bottom,from(transparent),color-stop(0.45,transparent),to(rgba(255,255,255,0.25)));
+	}
+	ul.osx-dock li a img{
+		width:60px;
+	}
+	ul.osx-dock li:hover{
+		margin-left:9px;
+		margin-right:9px;
+		z-index:200px;
+	}
+	ul.osx-dock li:hover a{
+		transform-origin:center bottom;
+		transform:scale(1.5);
+	}
+	ul.osx-dock li span{
+		position:absolute;
+		bottom:90px;
+		margin:0 auto;
+		display:none;
+		width:auto;
+		font-size:16px;
+		font-weight:bold;
+		padding:3px 6px;
+		border-radius:6px;
+		color:#fff;
+	}
+	ul.osx-dock li:hover span{display:block;}
+	div#dockContainer{
+		position:fixed;
+		bottom:35px;
+		height:120px;
+		padding:50px 0 0;
+		text-align:center;
+		border-radius:6px;
+		width:100%;
+		line-height:1;
+		z-index:100;
+	}
+	div#dockWrapper{
+		 width:auto;
+		 display:inline-block;
+		 position:relative;
+		 border-bottom:solid 2px rgba(255,255,255,0.35);
+		 line-height:0;
+		 background-color:rgba(0,0,0,0.2);
+		 box-shadow:0px 0px 5px #000;
+	}
+	</style>
+</head>
+<body>
+	<div id="dockContainer">
+		<div id="dockWrapper">
+			<ul class="osx-dock">
+				<li class="active"><span>clock</span><a href=""><img src="../img/icon1.png" alt=""></a></li>
+				<li><span>message</span><a href=""><img src="../img/icon2.png" alt=""></a></li>
+				<li><span>video</span><a href=""><img src="../img/icon3.png" alt=""></a></li>
+				<li><span>earth</span><a href=""><img src="../img/icon4.png" alt=""></a></li>
+				<li><span>phone</span><a href=""><img src="../img/icon5.png" alt=""></a></li>
+				<li><span>photo</span><a href=""><img src="../img/icon6.png" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
