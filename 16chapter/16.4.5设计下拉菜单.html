@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>16.4.5设计下拉菜单</title>
+	<style type="text/css">
+	body{
+		background:#ebebeb;
+		width:900px;
+		margin:20px auto;
+		color:#666;
+	}
+	a{
+		color:#333;
+	}
+	#nav{
+		margin:0;
+		padding:7px 6px 0;
+		line-height:100%;
+		border-radius:2em;
+		box-shadow:0 1px 3px rgba(0,0,0,.4);
+		background:#8b8b8b;
+		background:-moz-linear-gradient(top,#a9a9a9,#7a7a7a);
+		border:solid 1px #6d6d6d;
+	}
+	#nav li{
+		margin:0 5px;
+		padding:0 0 8px;
+		float:left;
+		position:relative;
+		list-style:none;
+	}
+	#nav a{
+		font-weight:bold;
+		color:#e7e5e5;
+		text-decoration:none;
+		display:block;
+		padding:8px 20px;
+		margin:0;
+		border-radius:1.6em;
+		text-shadow:0 1px 1px rgba(0,0,0,.3);
+	}
+	#nav .current a,#nav li:hover>a{
+		background:#d1d1d1;
+		background:linear-gradient(top,#ebebeb,#a1a1a1);
+		border-top:solid 1px #f8f8f8;
+		color:#444;
+		box-shadow:0 1px 1px rgba(0,0,0,.2);
+		text-shadow:0 1px 0 rgba(255,255,255,.8);
+	}
+	#nav ul li:hover a,#nav li:hover li a{
+		background:none;
+		border:none;
+		color:#666;
+		box-shadow:none;
+	}
+	#nav ul a:hover{
+		background:#0399d4!important;
+		background:gradient(linear,left,top,left bottom,from(#04acec),to(#0186ba))!important;
+		color:#fff!important;
+		border-radius:0;
+		text-shadow:0 1px 1px rgba(0,0,0,.1);
+	}
+	/*二级列表项样式*/
+	#nav ul{
+		background:#ddd;
+		background:linear-gradient(top,#fff,#cfcfcf);
+		display:none;
+		margin:0;
+		padding:0;
+		width:185px;
+		position:absolute;
+		top:35px;
+		left:0;
+		border:solid 1px #b4b4b4;
+		border-radius:10px;
+		box-shadow:0 1px 3px rgba(0,0,0,.3);
+	}
+	#nav li:hover > ul{
+		display:block;
+	}
+	#nav ul li{
+		float:none;
+		margin:0;
+		padding:0;
+	}
+	#nav ul a{
+		font-weight:normal;
+		text-shadow:0 1px 1px rgba(255,255,255,.9);
+	}
+	/*三级菜单列表框样式*/
+	#nav ul ul{
+		left:181px;
+		top:-3px;
+	}
+	/*为第一个子元素设置圆角效果*/
+	#nav ul li:first-child>a{
+		border-radius-topleft:9px;
+		border-radius-topright:9px;
+	}
+	/*为最后一个子元素设置圆角效果*/
+	#nav ul li:last-child>a{
+		border-radius-topleft:9px;
+		border-radius-topright:9px;
+	}
+	/*清除固定高度，让菜单框自动张开包含所有子元素*/
+	#nav:after{
+		content:".";
+		display:block;
+		clear:both;
+		visibility:hidden;
+		line-height:0;
+		height:0;
+
+	}
+	
+	</style>
+</head>
+<body>
+	<ul id="nav">
+		<li class="current"><a href="#">首页</a></li>
+		<li><a href="#">新闻》》</a>
+		<ul>
+			<li><a href="#">国际新闻</a></li>
+			<li><a href="#">国内新闻》》</a>
+			<ul>
+				<li><a href="#">地方新闻</a></li>
+				<li><a href="#">科技新闻》》</a>
+				<ul>
+					<li><a href="#">移动互联网发展趋势</a></li>
+					<li><a href="#">云计算</a></li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li><a href="#">论坛</a></li>
+		<li><a href="#">微博</a></li>
+	</ul>
+</body>
+</html>
