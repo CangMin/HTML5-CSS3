@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>17.3设计盒布局</title>
+	<style type="text/css">
+	/*定义包含框为盒子布局*/
+	#container{
+		display:box;
+		display:-moz-box;
+		display:-webkit-box;
+		-moz-box-orient:horizontal;
+		-webkit-box-orient:horizontal;
+		width:800px;
+		height:200px;
+		-moz-box-align:center;
+		-webkit-box-align:center;
+		-moz-box-pack:center;
+		-webkit-box-pack:center;
+	}
+	#left-sidebar{
+		width:160px;
+		padding:20px;
+		background-color:orange;
+		-moz-box-ordinal-group:3;
+		-webkit-box-ordinal-group:3;
+	}
+	/*定义中间列宽度为自适应显示*/
+	#contents{
+		/*width:500px;*/
+		-moz-box-flex:1;
+		-webkit-box-flex:1;
+		padding:20px;
+		background-color:yellow;
+		-moz-box-ordinal-group:1;
+		-webkit-box-ordinal-group:1;	
+	}
+	#right-sidebar{
+		width:160px;
+		padding:20px;
+		background-color:limegreen;
+		-moz-box-ordinal-group:2;
+		-webkit-box-ordinal-group:2;
+
+	}
+	/*绑定3列栏目为一个盒子整体布局效果*/
+	#left-sidebar,#contents,#right-sidebar{
+		box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+	}
+	</style>
+</head>
+<body>
+<div id="container">
+	<div id="left-sidebar">
+	<h2>倒萨发动机送进了</h2>
+	<ul>
+		<li><a href="">新闻</a></li>
+		<li><a href="">博客</a></li>
+		<li><a href="">微博</a></li>
+		<li><a href="">社区</a></li>
+		<li><a href="">关于</a></li>
+
+	</ul>
+	</div>
+	<div id="contents">
+	<h2>的感觉到了撒大几多撒恶搞</h2>
+	<p>随着越来越多的用户选择购买Mac，后者被攻击的次数也开始大幅增长。2015年成为了Mac受攻击最为严重的一年。根据Bit9 + Carbon Black Threat </p>
+	<p>Research（以下简称“Bit9 +”）团队的报告，2015年成为Mac有史以来遭遇过恶意攻击最多的一年，这一年的被攻击数量与前过去5年时间的总量相当。Bit9 +在报告中指出，随着包括Mac在内的苹果设备近年来成为主流产品，Mac的市场份额也出现了增长。苹果同时还进入了企业市场，黑客则希望通过攻击此类用户获得敏感的员工数据。</p>
+	</div>
+	<div id="right-sidebar">
+		<h2>大恒科技</h2>
+		<ul>
+			<li><a href="">百度</a></li>
+			<li><a href="">谷歌</a></li>
+			<li><a href="">360</a></li>
+		</ul>
+	</div>
+	</div>
+</body>
+</html>
